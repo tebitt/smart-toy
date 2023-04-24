@@ -1,0 +1,22 @@
+[
+    {
+        "id" : ["938B95A6","6322D4AA"], 
+        "name" : "Object_A",
+        "score" : 5
+    },
+    {
+        "id" : ["1C3D6151"],
+        "name" : "Object_B",
+        "score" : 3
+    },
+    {
+        "id" : ["1CB12051"],
+        "name" : "Object_C",
+        "score" : 2
+    },
+    {
+        "id" : ["4C4E1D51"],
+        "name" : "Object_D",
+        "score" : 6
+    }
+]
