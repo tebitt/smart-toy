@@ -2,21 +2,21 @@
     {
         "id" : ["938B95A6","6322D4AA"], 
         "name" : "Object_A",
-        "score" : 5
+        "in_plate" : false
     },
     {
-        "id" : ["1C3D6151"],
+        "id" : ["1C3D6151","ID22222"],
         "name" : "Object_B",
-        "score" : 3
+        "in_plate" : false
     },
     {
-        "id" : ["1CB12051"],
+        "id" : ["1CB12051","ID33333"],
         "name" : "Object_C",
-        "score" : 2
+        "in_plate" : false
     },
     {
-        "id" : ["4C4E1D51"],
+        "id" : ["4C4E1D51","ID44444"],
         "name" : "Object_D",
-        "score" : 6
+        "in_plate" : false
     }
 ]

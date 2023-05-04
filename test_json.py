@@ -10,8 +10,11 @@ with open("data.json", "r") as f:
 
 parts = {}
 for items in data:
-    for ids in items['id']:
-        parts[ids] = {'name': items['name'], 'score': items['score'] }
+    parts[items['id'][0]] = {'name': items['name'], 'in_plate': items['in_plate'], 'counter_part': items['id'][1]}
+    parts[items['id'][1]] = {'name': items['name'], 'in_plate': items['in_plate'], 'counter_part': items['id'][0]}
+
+for i in parts:
+    print(i, parts[i])
 
 while True:
     ard_data = ard.readline()
