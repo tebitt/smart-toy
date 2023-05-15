@@ -2,21 +2,21 @@
     {
         "id" : ["938B95A6","6322D4AA"], 
         "name" : "Object_A",
-        "in_plate" : false
+        "type" : "veg"
     },
     {
         "id" : ["1C3D6151","ID22222"],
         "name" : "Object_B",
-        "in_plate" : false
+        "type" : "protein"
     },
     {
         "id" : ["1CB12051","ID33333"],
         "name" : "Object_C",
-        "in_plate" : false
+        "type" : "fat"
     },
     {
         "id" : ["4C4E1D51","ID44444"],
         "name" : "Object_D",
-        "in_plate" : false
-    }
+        "type" : "fruit"
+    } 
 ]
