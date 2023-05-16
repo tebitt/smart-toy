@@ -59,6 +59,7 @@ while True:
     #if remove presed: remove(last_id) last_id.pop(-1)
     for i, connection in enumerate(ard):
         tag = connection.readline().decode("utf-8").replace('\r\n',"")
+        print(tag)
         if parts[tag]['type'] in reader_config[i]['validation']:
             put_in_plate(tag)
             if(count[tag]['type'] > 3): pass
