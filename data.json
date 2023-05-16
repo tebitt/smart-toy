@@ -20,7 +20,7 @@
         "type" : "veg"
     },
     {
-        "id" : ["4C6C5E51","1704DB04"], 
+        "id" : ["EC801A51","1704DB04"], 
         "name" : "Tomato_C",
         "type" : "veg"
     },
@@ -30,12 +30,12 @@
         "type" : "veg"
     },
     {
-        "id" : ["ECB92351","EC801A51"],
+        "id" : ["ECB92351","8C601B51"],
         "name" : "Carrot_B",
         "type" : "veg"
     },
     {
-        "id" : ["BC427251","7CC464451"],
+        "id" : ["BC427251","7CC46451"],
         "name" : "Carrot_C",
         "type" : "veg"
     },
@@ -67,22 +67,22 @@
     {
         "id" : ["DC102C51","4CD95D51"],
         "name" : "Cheese_A",
-        "type" : "protein"
+        "type" : "fat"
     },
     {
-        "id" : ["OC7E1E51","8C382151"],
+        "id" : ["0C7E1E51","8C382151"],
         "name" : "Cheese_B",
-        "type" : "protein"
+        "type" : "fat"
     },
     {
-        "id" : ["CC6C0B51","IC270F51"],
+        "id" : ["CC6C0B51","1C270F51"],
         "name" : "Cheese_C",
-        "type" : "protein"
+        "type" : "fat"
     },
     {
         "id" : ["BCA32151","BCC70B51"], 
         "name" : "Cheese_D",
-        "type" : "protein"
+        "type" : "fat"
     },
     {
         "id" : ["6C8D2551","9CE66851"],

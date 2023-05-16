@@ -3,7 +3,7 @@
 
 #define RST_PIN 9
 #define SS_PIN 10
-#define NUM_PREV_UIDS 100
+#define NUM_PREV_UIDS 70
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 
@@ -14,7 +14,7 @@ void setup() {
   SPI.begin();
   mfrc522.PCD_Init();
 
- // Serial.println("RFID Reader Initialized!");
+  Serial.println("RFID Reader Initialized!");
 }
 
 void loop() {
@@ -39,17 +39,14 @@ void loop() {
       }
       memcpy(lastUids[0], currentUid, sizeof(currentUid)); // Store new UID at the beginning of the array
 
+      Serial.print("RFID Tag UID: ");
       for (byte i = 0; i < mfrc522.uid.size; i++) {
         Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? "0" : "");
         Serial.print(mfrc522.uid.uidByte[i], HEX);
       }
-    Serial.println();
+      Serial.println();
     }
 
     mfrc522.PICC_HaltA();
   }
-}
-
-void resetLastUids() {
-  static byte lastUids[NUM_PREV_UIDS][10] = {{0}}; // Initialize last UIDs to all zeroes
 }
