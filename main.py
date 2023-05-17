@@ -29,6 +29,7 @@ with open("data.json", "r") as f:
 
 parts = {}
 count = {'veg':0, 'fat':0, 'protein':0, 'carbo':0} #3124
+scr = {'veg':300, 'fat':100, 'protein':200, 'carbo':400}
 
 for items in data:
     parts[items['id'][0]] = {'name': items['name'], 'type':items['type'], 'in_plate': False, 'counterpart': items['id'][1]}
@@ -52,11 +53,20 @@ def remove(id):
     parts[parts[i]['counterpart']]['in_plate'] = False
     count[parts[i]['type']] -= 1
     id.pop(-1)
-    #screen color goes back by 1 stage (amount? maybe? as in 0 is white 1 is yellow 2 is orange and 3 is green, >3 is red)
+    screen(scr[parts[i]['type']] + count[parts[i]['type']])
+
+
+def screen(index):
+    x = str(index)
+    print(x)
+    screen.write(bytes(x, 'utf-8'))
+    time.sleep(0.1)
+    return
 
 def reset():
     for i in parts: parts[i]['in_plate'] = False
     for i in count: count[i] = 0
+    screen(19)
 
 while True:
     for i, connection in enumerate(ard):
@@ -69,15 +79,16 @@ while True:
                 remove(last_id)
             elif parts[tag]['type'] == reader_config[i]['validation']:
                 put_in_plate(tag)
-                if(count[parts[tag]['type']] > M[parts[tag]['type']]): pass
-                #make screen red
-                else: pass
-                #make screen appropriate color yellow/orange/green
+                if(count[parts[tag]['type']] > M[parts[tag]['type']]):
+                    screen(scr[parts[tag]['type']] + M[parts[tag]['type']] + 1)
+                else: 
+                    screen(scr[parts[tag]['type']] + count[parts[tag]['type']])
                 print("Screen turned white/yellow/green/red depends on amount.", parts[tag]['type'], parts[tag]['name'])
                 if(tag in last_id) or (parts[tag]['counterpart'] in last_id): pass
                 else: last_id.append(tag)
             else:
-                print("Screen turned red.")
+                screen(scr[parts[tag]['type']] + M[parts[tag]['type']] + 1)
+                time.sleepsleep(2)
+                screen(scr[parts[tag]['type']] + count[parts[tag]['type']])
             print(last_id, tag)
-                #screen wrong food type (maybe other color than red to prevent confusion)
     time.sleep(1)
